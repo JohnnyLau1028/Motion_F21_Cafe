@@ -1,0 +1,27 @@
+/* =============
+    Navigation
+============= */
+nav{
+    height: 100%;
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        li{
+            margin-left: 6vw;
+
+            a:link, a:visited{
+                font-family: 'Charm', cursive;
+                font-size: rem-calc(20);
+                font-weight: 400;
+                color: #FFF6EC;
+                transition: .25s;
+
+                &:hover, &:active{
+                    color: #543B32;
+                }
+            }
+        }
+    }
+}
