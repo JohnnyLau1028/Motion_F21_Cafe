@@ -1,0 +1,13 @@
+/* =============
+    Typography
+============= */
+body h1, body h2, body h3, body h4 {
+  font-family: "Elsie Swash Caps", cursive;
+  margin: 0;
+  padding: 0;
+}
+body p {
+  font-family: "Charm", cursive;
+  margin: 0;
+  padding: 0;
+}

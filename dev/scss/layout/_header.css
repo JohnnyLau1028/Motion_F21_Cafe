@@ -1,0 +1,16 @@
+/* =============
+    Header
+============= */
+header {
+  width: 100%;
+  background-color: #CF9E65;
+}
+header > div {
+  display: grid;
+  grid-template-columns: 20% auto;
+  padding: 8px 16px;
+  border-right: 40px solid #705637;
+}
+header > div aside a {
+  display: inline-block;
+}

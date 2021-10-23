@@ -1,0 +1,25 @@
+/* =============
+    Navigation
+============= */
+nav {
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+nav ul li {
+  margin-left: 6vw;
+}
+nav ul li a:link, nav ul li a:visited {
+  font-family: "Charm", cursive;
+  font-size: rem-calc(20);
+  font-weight: 400;
+  color: #FFF6EC;
+  transition: 0.25s;
+}
+nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
+  color: #543B32;
+}
