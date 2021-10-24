@@ -15,14 +15,6 @@ ul {
     }
 }
 
-main {
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "hero"
-        "content";
-}
-
 a{
     text-decoration: none;
 }

@@ -365,11 +365,6 @@ ul li {
   list-style: none;
 }
 
-main {
-  display: grid;
-  grid-template-areas: "header" "hero" "content";
-}
-
 a {
   text-decoration: none;
 }
@@ -455,52 +450,38 @@ header > div aside a {
 /* =============
     Footer
 ============= */
-.content {
+#preloader {
   display: grid;
-  grid-template-columns: auto 80% auto;
-  grid-template-areas: ". content .";
-  padding: 64px 0;
-  background-color: #FEEEDB;
+  grid-template-columns: auto 90vw auto;
+  grid-template-areas: ". preloader .";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 5000;
+  background-color: #C29069;
 }
 @media (min-width: 768px) {
-  .content {
-    padding: 100px 0;
-    grid-template-columns: auto 50% auto;
+  #preloader {
+    grid-template-columns: auto 80vw auto;
   }
 }
 @media (min-width: 1024px) {
-  .content {
-    padding: 120px 0;
-    grid-template-columns: auto 50% auto;
+  #preloader {
+    grid-template-columns: auto 70vw auto;
   }
 }
 @media (min-width: 1440px) {
-  .content {
-    grid-template-columns: auto 50% auto;
+  #preloader {
+    grid-template-columns: auto 60vw auto;
   }
 }
-.content > div {
-  grid-area: content;
-  color: #2D1902;
+#preloader > div {
+  grid-area: preloader;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-@media (min-width: 1024px) {
-  .content > div {
-    padding: 0 100px;
-  }
-}
-.content > div h2 {
-  text-align: center;
-  font-size: 2.1875rem;
-  margin-bottom: 10px;
-  border-left: 40px solid #705637;
-  border-right: 40px solid #705637;
-}
-.content > div p {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  text-align: justify;
-}
-
 .hero {
   height: 80vh;
   width: 100%;
@@ -546,4 +527,50 @@ header > div aside a {
   .hero > div section h1 {
     font-size: 5rem;
   }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto 80% auto;
+  grid-template-areas: ". content .";
+  padding: 64px 0;
+  background-color: #FEEEDB;
+}
+@media (min-width: 768px) {
+  .content {
+    padding: 100px 0;
+    grid-template-columns: auto 50% auto;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    padding: 120px 0;
+    grid-template-columns: auto 50% auto;
+  }
+}
+@media (min-width: 1440px) {
+  .content {
+    grid-template-columns: auto 50% auto;
+  }
+}
+.content > div {
+  grid-area: content;
+  color: #2D1902;
+}
+@media (min-width: 1024px) {
+  .content > div {
+    padding: 0 100px;
+  }
+}
+.content > div h2 {
+  text-align: center;
+  font-size: 2.1875rem;
+  margin-bottom: 10px;
+  border-left: 40px solid #705637;
+  border-right: 40px solid #705637;
+}
+.content > div p {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  text-align: justify;
 }
