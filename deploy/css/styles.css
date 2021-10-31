@@ -484,6 +484,10 @@ header > div aside a {
   justify-content: center;
   align-content: center;
 }
+#preloader > div svg {
+  position: absolute;
+}
+
 .hero {
   height: 80vh;
   width: 100%;
