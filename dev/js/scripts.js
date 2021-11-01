@@ -1,19 +1,25 @@
 import { gsap } from "gsap";
+import { GSDevTools } from "gsap/GSDevTools";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
-import { EaselPlugin } from "gsap/EaselPlugin"; 
 
-gsap.registerPlugin (GSDevTools, DrawSVGPlugin, EaselPlugin, ExpoScaleEase, RoughEase, SlowMo);
+gsap.registerPlugin (GSDevTools, DrawSVGPlugin);
 
 const mainTL = gsap.timeline();
 
-function cup (){
-const TL = gsap.timeline();
-gsap.to("#cup", { duration: 2, ease: "power3.out", x: "-800%" });
-return TL;
+mainTL.from("#cup", {duration:.5, alpha:0, scale:1, x:"+=1000"});
+mainTL.from("#handle", {duration:.5, alpha:0, scale:1, x:"-=1000"});
+mainTL.from("#plate", {duration:.5, alpha:0, scale:3, y:"+=1000"});
+
+
+
+function circle(){
+    const TL= gsap.timeline();
+
+    TL.from("#circle", {duration:2, drawSVG: "0%"})
 }
 
-mainTL.add(cup);
+mainTL.add(circle());
+
 
 
 
