@@ -6,27 +6,67 @@ gsap.registerPlugin (GSDevTools, DrawSVGPlugin);
 
 const mainTL = gsap.timeline();
 
-mainTL.from("#cup", {duration:.5, alpha:0, scale:1, x:"+=1000"});
-mainTL.from("#handle", {duration:.5, alpha:0, scale:1, x:"-=1000"});
-mainTL.from("#plate", {duration:.5, alpha:0, scale:3, y:"+=1000"});
+function cup(){
+    const tl= gsap.timeline();
 
-function preloader1(){
-    const TL= gsap.timeline();
+    tl.from("#cup", {duration:.5, alpha:0, scale:1, x:"+=1000"});
+    tl.from("#handle", {duration:.5, alpha:0, scale:1, x:"-=1000"});
+    tl.from("#plate", {duration:.5, alpha:0, scale:3, y:"+=1000"});
 
-    TL.from("#preloader1", {alpha:0})
-    
+    return tl;
 }
 
 function circle(){
-    const TL= gsap.timeline();
+    const tl= gsap.timeline();
 
-    TL.from("#circle", {duration:1.5, drawSVG: "0%"})
-    TL.to("#circle", {alpha:0})
+    tl.from("#circle", {duration:1.5, drawSVG: "0%"})
+    tl.to("#circle", {alpha:0})
+
+    return tl;
 }
 
+function halfmoon(){
+    const tl= gsap.timeline();
+
+    tl.from("#halfmoon", {alpha:0})
+    tl.to("#halfmoon", {alpha:1})
+
+    return tl;
+}
+
+function progress1(){
+    const tl= gsap.timeline();
+
+    tl.from("#progress1", {duration:2, scaleY:0})
+
+    return tl;
+}
+
+function progress3(){
+    const tl= gsap.timeline();
+
+    tl.from("#progress3", {duration:2, scaleY:0})
+
+    return tl;
+}
+
+function progress2(){
+    const tl= gsap.timeline();
+
+    tl.from("#progress2", {duration:2, scaleY:5})
+    tl.from("#ellipse", {scale:.1, y:"100"})
+
+    return tl;
+}
+
+mainTL.add(cup())
+        .add(circle())
+        .add(halfmoon())
+        .add(progress1())
+        .add(progress3())
+        .add(progress2());
 
 
-mainTL.add(circle());
 
 
 
@@ -34,9 +74,7 @@ mainTL.add(circle());
 
 
 
-
-
-
+GSDevTools.create();
 
 //const mainTL = gsap.timeline();
 
@@ -48,5 +86,3 @@ mainTL.add(circle());
 //mainTL.from("#visitus", {duration:.5, alpha:0, scale:3, y:"+=1000"}, "-=1");
 
 //mainTL.from("p", {duration:.5, alpha:0, y:"+=100"});
-
-GSDevTools.create();
