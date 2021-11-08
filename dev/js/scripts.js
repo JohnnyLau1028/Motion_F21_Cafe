@@ -10,13 +10,21 @@ mainTL.from("#cup", {duration:.5, alpha:0, scale:1, x:"+=1000"});
 mainTL.from("#handle", {duration:.5, alpha:0, scale:1, x:"-=1000"});
 mainTL.from("#plate", {duration:.5, alpha:0, scale:3, y:"+=1000"});
 
+function preloader1(){
+    const TL= gsap.timeline();
 
+    TL.from("#preloader1", {alpha:0})
+    
+}
 
 function circle(){
     const TL= gsap.timeline();
 
-    TL.from("#circle", {duration:2, drawSVG: "0%"})
+    TL.from("#circle", {duration:1.5, drawSVG: "0%"})
+    TL.to("#circle", {alpha:0})
 }
+
+
 
 mainTL.add(circle());
 
