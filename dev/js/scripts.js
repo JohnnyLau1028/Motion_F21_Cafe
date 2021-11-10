@@ -73,8 +73,8 @@ function coffee(){
 function transition(){
     const tl= gsap.timeline();
 
-    tl.to("#circle",{duration:2, scale:25, fill:"#705637", stroke:"none"});
-    tl.to("#preloader",{duration:2, autoAlpha:0},"-=2");
+    tl.to("#circle",{duration:2, scale:25, fill:"#705637", stroke:"none", transformOrigin:"center"})
+    tl.to("#preloader",{duration:2, autoAlpha:0},"-=2")
 
     return tl;
 }
