@@ -88,7 +88,7 @@ mainTL.add(cup())
         .add(coffee())
         .add(transition());
 
-GSDevTools.create();
+//GSDevTools.create();
 
 mainTL.from(".hero", {duration:1, alpha:0, y:"-=1000", scale:2}, "-=2")
 .from(".hero h1",{duration:3, alpha:0, x:"+=1000"}, "-=2");
